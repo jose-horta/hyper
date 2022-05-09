@@ -10,7 +10,10 @@ import os
 import socket
 import base64
 
-from collections import Iterable, Mapping
+try:
+    from collections.abc import Iterable, Mapping
+except ImportError:
+    from collections import Iterable, Mapping
 
 import collections
 from hyperframe.frame import SettingsFrame
